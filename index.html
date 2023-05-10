@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href=".././style.css">
+</head>
+  <body>
+<div class="page">
+
+<header class=" flex space-between">
+<div>
+LOGO
+</div>
+<nav>
+<ul>
+<li><a href="sub/sub.html">one</a></li>
+<li><a href="two.html">two</a></li>
+<li><a href="three.html">three</a></li>
+</ul>
+</nav>
+</header>
+<hr />
+<h1>Wireframes from markdown</h1>
+<div class="block center hatch">
+<div class="sign">
+HERO IMAGE
+</div>
+</div>
+<h2>A brief overview.</h2>
+<p>This is a first pass at generating responsive wireframes from simple <strong>markdown</strong> files. I love creating notes in <strong>markdown</strong> and creating an outline of content for a page in a text file is standard procedure. It is simple matter to convert <strong>markdown</strong> to <strong>HTML</strong> so <em>why not include some blocks to show basic page layout</em> and have it be responsive.</p>
+<p>With this short python script and CSS file, you can convert a folder of markdown files into HTML files blocks or rows of blocks that are in a column on mobile.</p>
+<h3>2 Blocks</h3>
+<div class="flex">
+<div class="block">
+<p><strong>What does markdown look like?</strong></p>
+<p>It is just plain text with a few extra characters.</p>
+<pre><code>#### This is a headline.
+
+This is some text with
+a **bold** word.
+
+- Here
+- is a
+- list.
+</code></pre>
+</div>
+<div class="block">
+<p><strong>What do I need to add to the markdown file to show the wireframe elements?</strong></p>
+<p>Add <em>div</em> elements with the classes you want in the form of <em>HTML comments</em>. They will be uncommented by the script. If the <strong>markdown</strong> inside the tag does not need to be converted to <strong>HTML</strong>, you can use an <strong>HTML</strong> tag directly.</p>
+<p>Here is what the<mark> hero image </mark> box above looks like in the markdown file:</p>
+<pre><code>&lt;!--div class="block center hatch"--&gt;
+&lt;div class="sign"&gt;
+HERO IMAGE
+&lt;/div&gt;
+&lt;!--/div--&gt;
+</code></pre>
+</div>
+</div>
+
+<h3>3 Blocks</h3>
+<div class="flex">
+<div class="block center hatch">
+<div class="sign">
+FPO IMAGE
+</div>
+</div>
+<div class="block center">
+<p><button>Button</button></p>
+</div>
+<div class="block center dashed">
+<p>Block 3</p>
+</div>
+</div>
+
+<p>Here is a row of three blocks.
+The markdown to create them is shown below.</p>
+<pre><code>### 3 Blocks
+&lt;!--div class="flex"--&gt;
+&lt;!--div class="block center hatch"--&gt;
+
+&lt;div class="sign"&gt;
+FPO IMAGE
+&lt;/div&gt;
+&lt;!--/div--&gt;
+
+&lt;!--div class="block center"--&gt;
+&lt;button&gt;Button&lt;/button&gt;
+&lt;!--/div--&gt;
+
+&lt;!--div class="block center dashed"--&gt;
+Block 3
+&lt;!--/div--&gt;
+&lt;!--/div--&gt;
+</code></pre>
+<h2>Instructions</h2>
+<div class="block">
+<ol>
+<li>Download the <a href="repoaddress.html">repository</a>.</li>
+<li>Use the<mark> Terminal </mark> application to navigate into the downloaded folder.</li>
+<li>Edit the <em>index.md</em> file in a <mark>text editor</mark> and add any other <strong>markdown</strong> files want.</li>
+<li>Run the script on the current folder by typing <code>python md2wire.py .</code> in the<mark> terminal </mark>.</li>
+<li><strong>HTML</strong> files will be created next to the <strong>markdown</strong> files.</li>
+<li>Open the <a href="index.html">index.html</a> file to view your work.</li>
+</ol>
+</div>
+<h2>Examples</h2>
+<div class="flex space-between pad">
+<div class="shape triangle">Research</div>
+<div class="shape square">Design</div>
+<div class="shape circle">Technology</div>
+</div>
+<div>
+<p>2nd paragraph. <em>Italic</em>, <strong>bold</strong>, and <code>monospace</code>. Itemized lists
+look like:</p>
+<ul>
+<li>this one</li>
+<li>that one</li>
+<li>the other one</li>
+</ul>
+<p>Note that --- not considering the asterisk --- the actual text
+content starts at 4-columns in.</p>
+<blockquote>
+<p>Block quotes are
+written like so.</p>
+<p>They can span multiple paragraphs,
+if you like.</p>
+</blockquote>
+<p>Use 3 dashes for an em-dash. Use 2 dashes for ranges (ex., "it's all
+in chapters 12--14"). Three dots ... will be converted to an ellipsis.
+Unicode is supported. ☺
+Here's a numbered list:</p>
+<ol>
+<li>first item</li>
+<li>second item</li>
+<li>third item</li>
+</ol>
+<p>Note again how the <mark>actual text</mark> starts at 4 columns in (4 characters
+from the left side). Here's a code sample:</p>
+<pre><code># Let me re-iterate ...
+for i in 1 .. 10 { do-something(i) }
+</code></pre>
+<p>As you probably guessed, indented 4 spaces. By the way, instead of
+indenting the block, you can use delimited blocks, if you like:</p>
+<p><code>define foobar() {
+    print "Welcome to flavor country!";
+}</code></p>
+</div>
+
+<h3>An h3 header</h3>
+<p>Now a nested list:</p>
+<ol>
+<li>
+<p>First, get these ingredients:</p>
+<ul>
+<li>carrots</li>
+<li>celery</li>
+<li>lentils</li>
+</ul>
+</li>
+<li>
+<p>Boil some water.</p>
+</li>
+<li>
+<p>Dump everything in the pot and follow
+    this algorithm:</p>
+<pre><code>find wooden spoon
+uncover pot
+stir
+cover pot
+balance wooden spoon precariously on pot handle
+wait 10 minutes
+goto first step (or shut off burner when done)
+</code></pre>
+<p>Do not bump wooden spoon or it will fall.</p>
+</li>
+</ol>
+<p>Notice again how text always lines up on 4-space indents (including
+that last line which continues item 3 above).</p>
+<p>Here's a link to <a href="http://foo.bar">a website</a>, to a <a href="local-doc.html">local
+doc</a>, and to a <a href="#an-h2-header">section heading in the current
+doc</a>.</p>
+<p>Tables can look like this:</p>
+<table>
+<thead>
+<tr>
+<th>size</th>
+<th>material</th>
+<th>color</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9</td>
+<td>leather</td>
+<td>brown</td>
+</tr>
+<tr>
+<td>10</td>
+<td>hemp canvas</td>
+<td>natural</td>
+</tr>
+<tr>
+<td>11</td>
+<td>glass</td>
+<td>transparent</td>
+</tr>
+</tbody>
+</table>
+<p>Table: Shoes, their sizes, and what they're made of</p>
+<div class="flex">
+<div>
+<p><img alt="example image" src="cat.jpg" /></p>
+</div>
+<div>
+<p><img alt="example image" src="cat.jpg" /></p>
+</div>
+<div>
+<p><img alt="example image" src="cat.jpg" /></p>
+</div>
+<div>
+<p><img alt="example image" src="cat.jpg" /></p>
+</div>
+<div>
+<p><img alt="example image" src="cat.jpg" /></p>
+</div>
+
+</div>  </body>
+</html>
