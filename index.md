@@ -93,9 +93,9 @@ The markdown to create them is shown below.
 
 ## Instructions
 <!--div class="block"-->
-1. Download the [repository](repoaddress.html).
+1. Download the [repository](https://github.com/arielchuri/markdown2wireframe/archive/refs/heads/main.zip).
 1. Use the<mark> Terminal </mark> application to navigate into the downloaded folder.
-1. Edit the _index.md_ file in a <mark>text editor</mark> and add any other **markdown** files want.
+1. Edit the _index.md_ file in a <mark>text editor</mark> and add any other **markdown** files you want.
 1. Run the script on the current folder by typing ` python md2wire.py . ` in the<mark> terminal </mark>.
 1. **HTML** files will be created next to the **markdown** files.
 1. Open the [index.html](index.html) file to view your work.
